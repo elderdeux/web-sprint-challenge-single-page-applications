@@ -6,7 +6,7 @@ import "../../src/Form.css";
 //setup schema
 
 const formSchema = yup.object().shape({
-    name: yup.string().required("Name is a required field."),
+    name: yup.string().required("Name is a required field.").min(2),
     size: yup.string().required("Must Select a Size"),
     pepperoni: yup.boolean().defined(),
     sausage: yup.boolean().defined(),
